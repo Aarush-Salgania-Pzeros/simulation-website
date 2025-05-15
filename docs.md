@@ -7,8 +7,9 @@ title: Documentation
 
 Here you'll find documentation for the project.
 
-## Demo Video from Google Drive
+## Simulation Video
 
-<iframe src="https://drive.google.com/file/d/1cli25n5hVxda_3VVkNWw7v2_fT2tOcx3/preview" 
-        width="640" height="480" allow="autoplay">
-</iframe>
+<video width="640" height="360" controls autoplay muted loop>
+  <source src="content/simulation_poc_vid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
