@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Load Cayman theme CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   <style>
-    /* Match Cayman header gradient for navbar */
     nav {
-      background: none;
-      padding: 1rem;
+      margin-top: 1rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
@@ -23,32 +20,29 @@
     nav a:hover {
       text-decoration: underline;
     }
-
-    /* Space below navbar */
     .main-content {
-      padding-top: 2rem;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
-  <!-- Cayman-style header -->
+  <!-- Cayman header -->
   <section class="page-header">
     <h1 class="project-name">{{ site.title }}</h1>
     <h2 class="project-tagline">{{ site.description }}</h2>
-  </section>
 
-  <!-- Custom gradient navbar -->
-  <nav>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/about.html' | relative_url }}">About</a>
-    <a href="{{ '/docs.html' | relative_url }}">Documentation</a>
-    <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-  </nav>
+    <!-- ✅ Navbar inside the header section -->
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about.html' | relative_url }}">About</a>
+      <a href="{{ '/docs.html' | relative_url }}">Documentation</a>
+      <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </nav>
+  </section>
 
   <!-- Page content -->
   <section class="main-content">
     {{ content }}
   </section>
-
 </body>
 </html>
