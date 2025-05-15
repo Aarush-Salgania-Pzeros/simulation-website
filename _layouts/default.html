@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Load Cayman CSS from the theme -->
+  <!-- Load Cayman theme CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   <style>
-    /* Custom navbar styling */
+    /* Match Cayman header gradient for navbar */
     nav {
-      background: #0366d6;
+      background: linear-gradient(120deg, #6e48aa, #9d50bb);
       padding: 1rem;
       display: flex;
       justify-content: center;
@@ -24,19 +24,20 @@
       text-decoration: underline;
     }
 
-    /* Adjust Cayman content wrapper */
-    .wrapper {
+    /* Space below navbar */
+    .main-content {
       padding-top: 2rem;
     }
   </style>
 </head>
 <body>
+  <!-- Cayman-style header -->
   <section class="page-header">
     <h1 class="project-name">{{ site.title }}</h1>
     <h2 class="project-tagline">{{ site.description }}</h2>
   </section>
 
-  <!-- Custom navbar -->
+  <!-- Custom gradient navbar -->
   <nav>
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
@@ -44,16 +45,10 @@
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
+  <!-- Page content -->
   <section class="main-content">
     {{ content }}
   </section>
 
-  <footer class="site-footer">
-    {% if site.github.is_project_page %}
-      <span class="site-footer-owner">
-        <a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
-      </span>
-    {% endif %}
-  </footer>
 </body>
 </html>
